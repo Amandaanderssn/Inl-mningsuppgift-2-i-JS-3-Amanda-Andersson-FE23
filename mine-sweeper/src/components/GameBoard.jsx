@@ -76,11 +76,11 @@ export default class GameBoard extends React.Component {
 
             <section>
                 <div className="board">
-                    {theGameBoard.map((cell, index) => (  // Pass both `cell` and `index`
+                    {theGameBoard.map((cell, index) => (
                         <GameCells
                             key={index}
                             cell={cell}
-                            onClick={() => this.handleCellClick(index)}  // Make sure `index` is passed correctly here
+                            onClick={() => this.handleCellClick(index)}
                         />
                     ))}
                 </div>
