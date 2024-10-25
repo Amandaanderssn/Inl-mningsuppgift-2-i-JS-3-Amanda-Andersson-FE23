@@ -15,8 +15,6 @@ export default class GameBoard extends React.Component {
 
         this.state = {
             theGameBoard,
-            boardSize,
-            numberOfMines,
 
             gameOver: false, //GameOver if player finds a mine
             gameWon: false //GameWon if player clicks on all cells without finding any mines
@@ -76,11 +74,11 @@ export default class GameBoard extends React.Component {
 
             <section>
                 <div className="board">
-                    {theGameBoard.map((cell, index) => (
+                    {theGameBoard.map((cell) => (
                         <GameCells
-                            key={index}
+                            key={cell.index}
                             cell={cell}
-                            onClick={() => this.handleCellClick(index)}
+                            onClick={() => this.handleCellClick(cell.index)}
                         />
                     ))}
                 </div>
